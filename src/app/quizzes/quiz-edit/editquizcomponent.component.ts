@@ -2,11 +2,11 @@ import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { Quiz } from '../../../models/quiz.model';
 
 @Component({
-  selector: 'app-quiz',
-  templateUrl: './quiz.component.html',
-  styleUrls: ['./quiz.component.scss']
+  selector: 'app-edit-quiz',
+  templateUrl: './editquizcomponent.component.html',
+  styleUrls: ['./editquizcomponent.component.scss']
 })
-export class QuizComponent implements OnInit {
+export class EditQuizComponent implements OnInit {
   @Input()
   quiz: Quiz;
 
@@ -20,13 +20,4 @@ export class QuizComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  selectQuiz() {
-    this.quizSelected.emit(true);
-  }
-
-  deleteQuiz() {
-    this.quizDeleted.emit(this.quiz);
-  }
-
 }
